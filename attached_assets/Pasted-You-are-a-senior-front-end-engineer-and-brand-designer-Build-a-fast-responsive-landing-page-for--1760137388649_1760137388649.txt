@@ -1,0 +1,87 @@
+You are a senior front-end engineer and brand designer. Build a fast, responsive landing page for **R-Hat** with a minimalist + futuristic aesthetic and an **orange & beige** theme.
+
+### Context (use this to write the copy)
+R-Hat is an AR “cursor for hardware”: a lightweight wearable (hat + AR glasses) that brings real-time AI assistance to hands-on engineers and technicians on the factory floor, in the field, and in labs. It recognizes parts/tools, highlights what to do next, and provides step-by-step guidance, safety checks, and training overlays—without forcing people to leave the task at hand. Target users include manufacturing techs, electricians, mechanics, and maintenance crews. The value: faster onboarding, fewer errors, and “just-in-time” know-how where work actually happens.
+
+### Tech & project setup
+- Use **Vite + vanilla HTML/CSS/JS** (no framework) OR **Next.js + Tailwind** (pick one and implement fully; prefer Tailwind if you choose Next).
+- No external UI kits; write clean, semantic HTML and accessible components (WCAG AA).
+- Include SEO meta + Open Graph/Twitter tags, a favicon placeholder, and a simple `robots.txt` + `sitemap.xml`.
+
+### Visual/brand requirements
+- Color palette: 
+  - Primary orange: `#FF7A00`
+  - Accent orange (hover/gradient): `#FF9E3D`
+  - Beige background: `#F5E9DA`
+  - Ink: very dark gray `#1C1C1C`
+  - Subtle lines: `#E6D9C8`
+- Typography: Inter or Space Grotesk, generous line-height, lots of white space.
+- Style: minimal, airy, slightly sci-fi. Use thin grid lines, soft shadows, and subtle blur/glass for depth.
+- Micro-interactions: gentle fade/slide; **prefers-reduced-motion** safe.
+- Add a subtle animated hero background (e.g., noise + gradient shimmer or thin grid) with **no heavy WebGL**.
+
+### Page structure
+1. **Sticky Nav**: Logo “R-Hat” (simple wordmark), links: Features, How it Works, Use Cases, FAQ, Contact. CTA button: **Request a Demo**.
+2. **Hero**:
+   - Headline: “AI for hands-on engineers.”
+   - Subheadline: “Wearable AR guidance that highlights the right step, right where you’re looking.”
+   - Primary CTA: **Request a Demo** (modal form).
+   - Secondary CTA: **Join the Waitlist** (email capture).
+   - Right side: device mock illustration placeholder (replaceable `<img>`), plus small caption.
+3. **Value Props (3–4 cards)**:
+   - “On-the-spot guidance” — step-by-step overlays, tool/part recognition.
+   - “Fewer errors” — real-time checks & alerts.
+   - “Faster training” — capture expert workflows into repeatable procedures.
+   - “Works where you work” — shop floors, plants, field service.
+4. **How It Works (3 steps)**:
+   - Capture: camera + IMU stream.
+   - Understand: on-device/edge AI interprets scene & intent.
+   - Guide: AR highlights + voiced instructions; auto-log completion.
+   - Include tiny diagram with icons + arrows.
+5. **Use Cases**:
+   - Manufacturing changeovers, preventive maintenance, QC checks.
+   - Electrical/HVAC diagnostics.
+   - Lab procedures & calibration.
+6. **Social proof row** (placeholder logos).
+7. **Technical Callout** (small section):
+   - “Built for industry”: offline modes, privacy-first video handling, admin console, API hooks.
+8. **FAQ** (6 items).
+9. **CTA band**: “Bring AI to the bench, bay, and field.” Button: **Request a Demo**.
+10. **Footer**: links, email, copyright.
+
+### Copy tone
+- Crisp, confident, practical. No buzzword salad. Keep sentences short.
+
+### Components & behavior
+- Accessible **modal** for Demo & Waitlist forms (name, work email, company, role, use case).
+- Form validation and success state (no backend; fake POST + toast).
+- Mobile-first layout; hero image stacks under copy on small screens.
+- Smooth scroll for in-page nav; active link highlighting.
+- Light/dark treatment NOT required; single (beige) theme is fine.
+
+### Implementation details
+- Establish CSS variables for the palette and spacing scale. Example:
+  :root {
+    --orange: #FF7A00;
+    --orange-2: #FF9E3D;
+    --beige: #F5E9DA;
+    --ink: #1C1C1C;
+    --line: #E6D9C8;
+  }
+- Create a reusable `.btn` component (primary/ghost), `.card`, `.container`, `.grid`.
+- Hero background: CSS gradient + animated noise or subtle grid using `linear-gradient` backgrounds; keep CPU-light.
+- Use `<picture>` for hero mock so I can swap assets later.
+- Include a small inline SVG “R-Hat” wordmark.
+- Add a `README.md` with instructions to swap copy, images, and deployment steps.
+
+### Sample copy (you can refine it)
+- **Headline:** AI for hands-on engineers.
+- **Subheadline:** R-Hat is a wearable AR assistant that recognizes parts and shows the next step—right in your field of view.
+- **Value prop blurbs:** 
+  - On-the-spot guidance → Reduce guesswork with step-by-step overlays and tool recognition.
+  - Fewer errors → Real-time checks catch mis-wires, missing fasteners, and unsafe steps.
+  - Faster training → Turn expert workflows into repeatable, auditable procedures.
+  - Works where you work → From factory floors to field service, online or offline.
+- **CTA band text:** Bring AI to the bench, bay, and field.
+
+Deliver production-quality code with clear comments, a clean file structure, and placeholder assets. Then run it so I can preview.
