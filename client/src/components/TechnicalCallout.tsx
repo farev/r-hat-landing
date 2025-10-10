@@ -12,7 +12,7 @@ export default function TechnicalCallout() {
   return (
     <section className="py-20 md:py-32 bg-muted/30">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <Card className="p-12">
+        <Card className="p-12 shadow-lg">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               Built for industry

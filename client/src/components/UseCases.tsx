@@ -36,7 +36,7 @@ export default function UseCases() {
           {useCases.map((useCase, index) => {
             const Icon = useCase.icon;
             return (
-              <Card key={index} className="p-8 hover-elevate transition-all duration-200" data-testid={`use-case-${index}`}>
+              <Card key={index} className="p-8 hover-elevate transition-all duration-200 shadow-md" data-testid={`use-case-${index}`}>
                 <div className="space-y-6">
                   <div className="flex items-center gap-3">
                     <div className="p-2 bg-primary/10 rounded-lg">

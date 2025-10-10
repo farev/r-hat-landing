@@ -39,7 +39,7 @@ export default function HowItWorks() {
               const Icon = step.icon;
               return (
                 <div key={index} className="relative" data-testid={`step-${index}`}>
-                  <div className="bg-background rounded-lg p-8 border border-border hover-elevate transition-all duration-200">
+                  <div className="bg-background rounded-lg p-8 border border-border hover-elevate transition-all duration-200 shadow-md">
                     <div className="flex flex-col items-center text-center space-y-4">
                       <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
                         <Icon className="w-8 h-8 text-primary-foreground" />

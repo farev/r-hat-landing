@@ -9,7 +9,7 @@ export default function CTABand({ onRequestDemo }: CTABandProps) {
   return (
     <section className="py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="bg-gradient-to-br from-primary to-accent rounded-2xl p-12 md:p-20 text-center">
+        <div className="bg-gradient-to-br from-primary to-accent rounded-2xl p-12 md:p-20 text-center shadow-xl">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Bring AI to the bench, bay, and field.
           </h2>

@@ -43,7 +43,7 @@ export default function ValueProps() {
             return (
               <Card
                 key={index}
-                className="p-8 hover-elevate transition-all duration-200"
+                className="p-8 hover-elevate transition-all duration-200 shadow-md"
                 data-testid={`card-value-${index}`}
               >
                 <div className="flex items-start gap-4">

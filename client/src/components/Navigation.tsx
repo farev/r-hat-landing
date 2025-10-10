@@ -51,7 +51,7 @@ export default function Navigation({ onRequestDemo }: NavigationProps) {
   return (
     <nav
       className={`sticky top-0 z-50 transition-all duration-200 ${
-        isScrolled ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        isScrolled ? 'bg-background/80 backdrop-blur-md shadow-md border-b border-border' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
