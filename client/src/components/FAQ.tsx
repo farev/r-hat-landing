@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import ScrollReveal from './ScrollReveal';
 
 const faqs = [
   {
@@ -36,22 +37,24 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-20 md:py-32">
       <div className="max-w-3xl mx-auto px-6 md:px-12">
-        <div className="text-center mb-16">
+        <ScrollReveal className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Frequently asked questions
           </h2>
-        </div>
+        </ScrollReveal>
 
         <Accordion type="single" collapsible className="space-y-4">
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="border-2 border-border rounded-lg px-6 shadow-sm" data-testid={`faq-item-${index}`}>
-              <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
+            <ScrollReveal key={index} delay={index * 0.05}>
+              <AccordionItem value={`item-${index}`} className="border-2 border-border rounded-lg px-6 shadow-sm" data-testid={`faq-item-${index}`}>
+                <AccordionTrigger className="text-left font-semibold hover:no-underline">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            </ScrollReveal>
           ))}
         </Accordion>
       </div>
