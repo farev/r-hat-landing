@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://r-hat.com/sitemap.xml
+Sitemap: https://r-hat.live/sitemap.xml

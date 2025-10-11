@@ -4,8 +4,6 @@ import Hero from '@/components/Hero';
 import ValueProps from '@/components/ValueProps';
 import HowItWorks from '@/components/HowItWorks';
 import UseCases from '@/components/UseCases';
-import SocialProof from '@/components/SocialProof';
-import TechnicalCallout from '@/components/TechnicalCallout';
 import FAQ from '@/components/FAQ';
 import CTABand from '@/components/CTABand';
 import Footer from '@/components/Footer';
@@ -26,8 +24,6 @@ export default function Home() {
       <ValueProps />
       <HowItWorks />
       <UseCases />
-      <SocialProof />
-      <TechnicalCallout />
       <FAQ />
       <CTABand onRequestDemo={() => setDemoModalOpen(true)} />
       <Footer />

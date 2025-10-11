@@ -1,5 +1,3 @@
-import logoImage from '@assets/R_1760137469140.png';
-
 export default function Footer() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -17,7 +15,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <img src={logoImage} alt="R-Hat" className="h-8 w-8" />
+              <img src="/r-hat-logo.png" alt="R-Hat" className="h-12 w-12" />
               <span className="text-xl font-bold text-foreground">R-Hat</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -55,7 +53,7 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                <a href="mailto:support@r-hat.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-support">
+                <a href="mailto:farevalo6@gatech.edu" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-support">
                   Contact Support
                 </a>
               </li>
@@ -66,8 +64,8 @@ export default function Footer() {
             <h3 className="font-semibold text-foreground mb-4">Contact</h3>
             <ul className="space-y-2">
               <li>
-                <a href="mailto:hello@r-hat.com" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-email">
-                  hello@r-hat.com
+                <a href="mailto:farevalo6@gatech.edu" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-email">
+                  farevalo6@gatech.edu
                 </a>
               </li>
             </ul>

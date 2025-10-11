@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import logoImage from '@assets/R_1760137469140.png';
+import logoImage from '@assets/R__2_-removebg-preview.png';
 
 interface NavigationProps {
   onRequestDemo: () => void;
@@ -57,7 +57,7 @@ export default function Navigation({ onRequestDemo }: NavigationProps) {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center gap-2">
-            <img src={logoImage} alt="R-Hat" className="h-8 w-8" />
+            <img src={logoImage} alt="R-Hat" className="h-16 w-16" />
             <span className="text-xl font-bold text-foreground">R-Hat</span>
           </div>
 
