@@ -29,19 +29,42 @@ export default function DemoModal({ open, onClose }: DemoModalProps) {
     useCase: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Demo request submitted:', formData);
-    setSubmitted(true);
-    toast({
-      title: 'Demo request received!',
-      description: "We'll be in touch within 24 hours.",
-    });
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', company: '', role: '', useCase: '' });
-      onClose();
-    }, 2000);
+    
+    try {
+      const response = await fetch('/api/demo-request', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit demo request');
+      }
+
+      setSubmitted(true);
+      toast({
+        title: 'Demo request received!',
+        description: "We'll be in touch within 24 hours.",
+      });
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: '', email: '', company: '', role: '', useCase: '' });
+        onClose();
+      }, 2000);
+    } catch (error) {
+      console.error('Demo request error:', error);
+      toast({
+        title: "Something went wrong",
+        description: error instanceof Error ? error.message : "Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (

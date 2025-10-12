@@ -7,10 +7,9 @@ import TiltCard from './TiltCard';
 
 interface HeroProps {
   onRequestDemo: () => void;
-  onJoinWaitlist: () => void;
 }
 
-export default function Hero({ onRequestDemo, onJoinWaitlist }: HeroProps) {
+export default function Hero({ onRequestDemo }: HeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -61,9 +60,6 @@ export default function Hero({ onRequestDemo, onJoinWaitlist }: HeroProps) {
                 <Button size="lg" onClick={onRequestDemo} className="gap-2" data-testid="button-request-demo-hero">
                   Request a Demo
                   <ArrowRight className="w-4 h-4" />
-                </Button>
-                <Button size="lg" variant="outline" onClick={onJoinWaitlist} data-testid="button-join-waitlist">
-                  Join the Waitlist
                 </Button>
               </div>
             </ScrollReveal>

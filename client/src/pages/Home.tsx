@@ -8,19 +8,14 @@ import FAQ from '@/components/FAQ';
 import CTABand from '@/components/CTABand';
 import Footer from '@/components/Footer';
 import DemoModal from '@/components/DemoModal';
-import WaitlistModal from '@/components/WaitlistModal';
 
 export default function Home() {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
-  const [waitlistModalOpen, setWaitlistModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen">
       <Navigation onRequestDemo={() => setDemoModalOpen(true)} />
-      <Hero
-        onRequestDemo={() => setDemoModalOpen(true)}
-        onJoinWaitlist={() => setWaitlistModalOpen(true)}
-      />
+      <Hero onRequestDemo={() => setDemoModalOpen(true)} />
       <ValueProps />
       <HowItWorks />
       <UseCases />
@@ -29,7 +24,6 @@ export default function Home() {
       <Footer />
 
       <DemoModal open={demoModalOpen} onClose={() => setDemoModalOpen(false)} />
-      <WaitlistModal open={waitlistModalOpen} onClose={() => setWaitlistModalOpen(false)} />
     </div>
   );
 }
