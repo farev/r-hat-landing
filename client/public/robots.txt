@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://r-hat.live/sitemap.xml
+Sitemap: https://rhat.live/sitemap.xml
+Sitemap: https://rhat.live/glass/sitemap-index.xml
