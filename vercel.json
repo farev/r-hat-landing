@@ -12,7 +12,7 @@
   "routes": [
     {
       "src": "/glass",
-      "dest": "https://r-glass.vercel.app"
+      "dest": "https://r-glass.vercel.app/"
     },
     {
       "src": "/glass/(.*)",
